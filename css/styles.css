@@ -13,6 +13,7 @@
   --logo: #000000;
   --background: #2f303a;
   --section-background: #f5f4fa;
+  --hero-gradient: rgba (47, 48, 58, 0.4);
 }
 
 .list {
@@ -114,7 +115,7 @@ h6 {
 /* navigation address */
 .container > .nav-address {
   display: flex;
-  justify-content: end;
+  margin-left: auto;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.1;
@@ -126,6 +127,8 @@ h6 {
 }
 
 .nav-link {
+  display: flex;
+  align-items: center;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.1;
@@ -135,17 +138,28 @@ h6 {
   color: var(--primary-text-color);
 }
 
-.nav-address .nav-link:hover,
-.nav-address .nav-link:focus {
+.nav-link:hover,
+.nav-link:focus {
   color: var(--accent-color);
+}
+
+.nav-address-icons {
+  margin-right: 10px;
+  fill: currentColor;
 }
 
 /* main */
 /* hero */
 .hero {
+  margin-left: auto;
+  margin-right: auto;
+  background-image: url('../images/background.jpg');
   background-color: var(--background);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   text-align: center;
-  min-width: 1600px;
+  max-width: 1600px;
   max-height: 600px;
 }
 
@@ -209,6 +223,16 @@ h6 {
 .advantages {
   padding-top: 94px;
   padding-bottom: 94px;
+}
+
+.advantages-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 270px;
+  height: 120px;
+  background-color: var(--section-background);
+  margin-bottom: 30px;
 }
 
 .advantages .title {
@@ -300,6 +324,12 @@ h6 {
   margin-right: 30px;
 }
 
+/* section our clients */
+.clients-list {
+  display: flex;
+  justify-content: center;
+}
+
 /* footer */
 
 .footer {
@@ -343,6 +373,10 @@ h6 {
 .footer-address .link:hover,
 .footer-address .link:focus {
   color: var(--accent-color);
+}
+
+.join-list {
+  display: flex;
 }
 
 /* portfolio */
