@@ -545,6 +545,7 @@ img {
   padding-top: 6px;
   padding-bottom: 6px;
   margin-right: 8px;
+  cursor: pointer;
 
   font-family: 'Roboto', sans-serif;
   font-weight: 500;
