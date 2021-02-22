@@ -13,7 +13,8 @@
   --logo: #000000;
   --background: #2f303a;
   --section-background: #f5f4fa;
-  --hero-gradient: rgba (47, 48, 58, 0.4);
+  --social-links: #afb1b8;
+  --footer-social-links: rgba(255, 255, 255, 0.1);
 }
 
 .list {
@@ -99,8 +100,8 @@ h6 {
 .site-nav .link {
   color: var(--text-nav-title-color);
   display: inline-block;
-  padding-top: 34px;
-  padding-bottom: 30px;
+  padding-top: 32px;
+  padding-bottom: 32px;
 }
 
 .site-nav > li:not(:last-child) {
@@ -129,12 +130,16 @@ h6 {
 .nav-link {
   display: flex;
   align-items: center;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
   font-weight: 500;
   font-size: 14px;
   line-height: 1.1;
   letter-spacing: 0.02em;
   text-decoration: none;
   font-style: normal;
+
   color: var(--primary-text-color);
 }
 
@@ -153,7 +158,12 @@ h6 {
 .hero {
   margin-left: auto;
   margin-right: auto;
-  background-image: url('../images/background.jpg');
+  background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url('../images/background.jpg');
   background-color: var(--background);
   background-repeat: no-repeat;
   background-size: cover;
@@ -293,6 +303,8 @@ h6 {
 }
 
 .team .sub-title {
+  margin-bottom: 10px;
+
   font-weight: 500;
   font-size: 16px;
   line-height: 1.9;
@@ -306,10 +318,50 @@ h6 {
 }
 
 .team-text {
+  margin-bottom: 16px;
+
   font-weight: 400;
   font-size: 16px;
   line-height: 1.9;
   letter-spacing: 0.03em;
+}
+
+.team-container {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.social-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.social-link {
+  display: inline-flex;
+  width: 44px;
+  height: 44px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 12px;
+  padding-right: 12px;
+  border-radius: 50%;
+
+  color: var(--social-links);
+}
+
+.social-link:hover,
+.social-link:focus {
+  background-color: var(--accent-color);
+  color: var(--white-color);
+}
+
+.social-icon {
+  fill: currentColor;
 }
 
 .team-item {
@@ -325,9 +377,52 @@ h6 {
 }
 
 /* section our clients */
+.regular {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.title-regular {
+  margin-bottom: 50px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 1.7;
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+
 .clients-list {
   display: flex;
   justify-content: center;
+  align-items: center;
+}
+
+.clients-item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.clients-link {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 170px;
+  height: 90px;
+
+  border: 1px solid var(--social-links);
+  border-radius: 4px;
+
+  color: var(--social-links);
+}
+
+.clients-link:hover,
+.clients-link:focus {
+  color: var(--accent-color);
+  border-color: var(--accent-color);
+}
+
+.clients-icon {
+  fill: currentColor;
 }
 
 /* footer */
@@ -336,6 +431,51 @@ h6 {
   padding-top: 60px;
   min-height: 252px;
   background-color: var(--background);
+}
+
+.footer > .container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+}
+
+.join-container {
+  margin-left: 70px;
+}
+
+.footer-social {
+  display: inline-flex;
+  width: 44px;
+  height: 44px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 12px;
+  padding-right: 12px;
+  border-radius: 50%;
+
+  color: var(--white-color);
+  background: var(--footer-social-links);
+}
+
+.footer-social:hover,
+.footer-social:focus {
+  background-color: var(--accent-color);
+}
+
+.join-list {
+  display: flex;
+}
+
+.join-text {
+  margin-bottom: 20px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.1;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  color: var(--white-color);
 }
 
 .footer-logo {
@@ -373,10 +513,6 @@ h6 {
 .footer-address .link:hover,
 .footer-address .link:focus {
   color: var(--accent-color);
-}
-
-.join-list {
-  display: flex;
 }
 
 /* portfolio */
@@ -422,6 +558,7 @@ img {
 .button:focus {
   color: var(--white-color);
   background-color: var(--accent-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .link .title {
@@ -453,6 +590,13 @@ img {
   flex-basis: calc(100% / 3 - 30px);
   margin-left: 30px;
   margin-top: 30px;
+  border: 1px solid #eeeeee;
+}
+
+.card .link:hover,
+.card .link:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .card-text {
